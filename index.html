@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Nine';
+            src: url('font/Nine-By-Five-NBP.eot') format('embedded-opentype'), url('font/Nine-By-Five-NBP.woff') format('woff'), url('font/nine0.ttf') format('truetype'), url('font/Nine-By-Five-NBP.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- toast -->
+    <div class="container-fluid remove-all-margin-padding">
+        <div class="position-fixed bottom-0 end-0 p-3 bg-transparent" style="z-index: 5">
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="https://cdn4.iconfinder.com/data/icons/pacman-8-bit/147/ghost_3-512.png" style="width: 20px; margin-right: 5px;" class="bg-transparent">
+                    <strong class="me-auto bg-transparent style-font style-font-size-15">Message</strong>
+                    <small class="bg-transparent style-font style-font">Just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body bg-transparent style-font style-font-size-15">
+                    Have fun!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- welcome -->
+    <section class="start">
+        <div class="container remove-all-margin-padding" id="one">
+            <div class="text">
+                <h2 class="position-absolute top-0 start-50 translate-middle-x style-font">ADVENTURE OF 4 HEROES</h2>
+                <p class="position-absolute bottom-0 end-0 style-font bg-transparent">4 HEROS TRY TO FIGHT DRAGON<br>TO SAVE THEIR PRECIOUS PRINCESS<br>VERSION 20.02.2021</p>
+            </div>
+
+            <button class="btn top-50 start-50 translate-middle hov" onclick="show(2)">
+        <div class="colorstyle hide bg-transparent" style="margin-top: 2vw;">&gt;&nbsp;</div>
+        <div id="liveToastBtn" class="toad bg-transparent">START</div>
+        <div class="colorstyle hide bg-transparent" style="margin-top: 2vw;">&nbsp;&lt;</div>
+      </button>
+            <img src="https://media.discordapp.net/attachments/699111255868178453/820348372728414228/BACKGROUND_1.png">
+        </div>
+    </section>
+
+    <!-- choose your heroes -->
+    <section class="choose">
+        <div class="container remove-all-margin-padding hide" id="two">
+
+            <button class="btn position-absolute d-flex style-font hov" onclick="show(1)">
+        <div class="arrow style-font bg-transparent style-font-size-35 hide">&lt;</div>
+        <div class="position-absolute bg-transparent style-font-size-35">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BACK</div>
+      </button>
+            <div class="text position-absolute top-0 start-50 translate-middle-x style-font bg-transparent text-dec">CHOOSE YOUR HEROES</div>
+
+
+            <!-- carousel -->
+
+            <div id="carouselExampleControls" class="carousel slide w-50 position-absolute top-0 start-50 translate-middle-x" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner" style="margin-top: 100px; padding-bottom: 10%;">
+                    <div class="carousel-item bg-transparent active" onclick="show(3)" style="height: 35vw; width: 50vw;">
+                        <img class="tawanface position-absolute top-50 start-50 translate-middle img-fluid" style="height: 25vw; width: 25vw;" src="image/jaosua.png" onmouseover="this.src='image/wizardricardo.gif'" onmouseout="this.src='image/jaosua.png'">
+                        <p class="name position-absolute bottom-0 start-50 translate-middle-x style-font" style="color: rgb(223, 144, 255);">MUSCLE WIZARD
+                        </p>
+                    </div>
+                    <div class="carousel-item bg-transparent" onclick="show(4)" style="height: 35vw; width: 50vw;">
+                        <img class="tawanface position-absolute top-50 start-50 translate-middle img-fluid" style="height: 25vw; width: 25vw;" src="image/may.png" onmouseover="this.src='image/sloth.gif'" onmouseout="this.src='image/may.png'">
+                        <p class="name position-absolute bottom-0 start-50 translate-middle-x style-font" style="color: chartreuse;">SLOTH ASSASSIN
+                        </p>
+                    </div>
+                    <div class="carousel-item bg-transparent" onclick="show(5)" style="height: 35vw; width: 50vw;">
+                        <img class="tawanface position-absolute top-50 start-50 translate-middle img-fluid" style="height: 25vw; width: 25vw;" src="image/tawan.png" onmouseover="this.src='image/armless.gif'" onmouseout="this.src='image/tawan.png'">
+                        <p class="name position-absolute bottom-0 start-50 translate-middle-x style-font " style="color: tomato;">ARMLESS ARCHER
+                        </p>
+                    </div>
+                    <div class="carousel-item bg-transparent" onclick="show(6)" style="height: 35vw; width: 50vw;">
+                        <img class="tawanface position-absolute top-50 start-50 translate-middle img-fluid" style="height: 25vw; width: 25vw;" src="image/smarty.png" onmouseover="this.src='image/knightdance.gif'" onmouseout="this.src='image/smarty.png'">
+                        <p class="name position-absolute bottom-0 start-50 translate-middle-x style-font" style="color: blue;">BASTARD KNIGHT
+                        </p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+            </div>
+
+            <div class="bg">
+                <img src="/image/BACKGROUND3c.png" style="height: 100%; width: 100%; z-index: -1; position: absolute;">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- profile -->
+    <section class="profile">
+        <div class="hide" id="three">
+            <button class="btn position-absolute d-flex style-font hov" onclick="show(2)" id="backBtn">
+        <div class="arrow style-font bg-transparent style-font-size-35 hide">&lt;</div>
+        <div class="position-absolute bg-transparent style-font-size-35">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BACK</div>
+      </button>
+
+            <!-- jaosua -->
+            <section class="jaosua">
+                <div class="container remove-all-margin-padding hide" id="js">
+                    <div class="detail d-flex justify-content-center align-items-center" style="margin: 0vw; padding: 0vw; width: 100vw; height: 100vh;">
+                        <img src="/image/profile/js_bg.png" style="height: 100%; width: 100%; z-index: -1; position: absolute;">
+                        <div class="left d-flex">
+                            <img src="/image/profile/jaosua.png" class="yugi">
+                        </div>
+                        <div class="right">
+                            <div class="group d-flex">
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#js1" aria-expanded="false" aria-controls="js1">PROFILE</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#js2" aria-expanded="false" aria-controls="js2">EDUCATION</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#js3" aria-expanded="false" aria-controls="js3">INTEREST</button>
+                            </div>
+                            <div class="row style-font style-font-size-15">
+                                <div class="collapse multi-collapse" id="js1" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 12vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text" style="margin: 0vw;">
+                                            <b>NAME :</b> Gobbun Sripimolwan <br>
+                                            <b>NICKNAME :</b> Jaosua <br>
+                                            <b>DATE OF BIRTH :</b> 17 Nov 2000 <b>AGE :</b> 20 <br>
+                                            <b>HEIGHT :</b> 175 cm <b>Weight :</b> 57 kg<br>
+                                            <b>ID :</b> 62010044
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="js2" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 7vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text" style="margin: 0vw;">
+                                            <b>Primary school :</b> SettabutUphathum School<br>
+                                            <b>High school :</b> Satriwitthaya 2<br>
+                                            <b>University :</b> King Mongkut's Institute of Technology Ladkrabang
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="js3" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 5vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text" style="margin: 0vw;">
+                                            <b>Sports :</b> Volleyball , Badminton , Table-tennis<br>
+                                            <b>Hobbies :</b> watching anime , playing games , listening to music
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- may -->
+            <section class="may">
+                <div class="container remove-all-margin-padding hide" id="mayy">
+                    <div class="detail d-flex justify-content-center align-items-center" style="margin: 0vw; padding: 0vw; width: 100vw; height: 100vh;">
+                        <img src="/image/profile/m_bg.png" style="height: 100%; width: 100%; z-index: -1; position: absolute;">
+                        <div class="left d-flex">
+                            <img src="/image/profile/May.jpg" class="yugi">
+                        </div>
+                        <div class="right ">
+                            <div class="group d-flex">
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#m1" aria-expanded="false" aria-controls="m1">PROFILE</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#m2" aria-expanded="false" aria-controls="m2">EDUCATION</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#m3" aria-expanded="false" aria-controls="m3">INTEREST</button>
+                            </div>
+                            <div class="row style-font style-font-size-15">
+                                <div class="collapse multi-collapse" id="m1" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 12vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="textcard">
+                                            <b>NAME :</b> Chutikarn Wongsung <br>
+                                            <b>NICKNAME :</b> May <br>
+                                            <b>DATE OF BIRTH :</b> 23 March 2001 <b>AGE :</b> 19 years old<br>
+                                            <b>HEIGHT :</b> 172 cm <b>Weight :</b> 55 kg<br>
+                                            <b>ID :</b> 62010208
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="m2" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 7vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="textcard">
+                                            <b>Primary school :</b> St. Joseph Thiphawan School<br>
+                                            <b>High school :</b> Ratwinit Bankaeo School<br>
+                                            <b>University :</b> King Mongkut's Institute of Technology Ladkrabang
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="m3" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 5vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="textcard">
+                                            <b>Sports :</b> Rollerblading<br>
+                                            <b>Hobbies :</b> Photography, checking smartphone's news
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- tawan -->
+            <section class="tawan">
+                <div class="container remove-all-margin-padding hide" id="tw">
+                    <div class="detail d-flex justify-content-center align-items-center" style="margin: 0vw; padding: 0vw; width: 100vw; height: 100vh;">
+                        <img src="/image/profile/t_bg.png" style="height: 100%; width: 100%; z-index: -1; position: absolute;">
+                        <div class="left d-flex">
+                            <img src="/image/profile/tawan.png" class="yugi">
+                        </div>
+                        <div class="right">
+                            <div class="group d-flex">
+                                 <button class=" btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#t1" aria-expanded="false" aria-controls="t1">PROFILE</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#t2" aria-expanded="false" aria-controls="t2">EDUCATION</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#t3" aria-expanded="false" aria-controls="t3">INTEREST</button>
+                            </div>
+                            <div class="row style-font style-font-size-15">
+                                <div class="collapse multi-collapse" id="t1" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 12vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>NAME :</b> Tawan Wijanta <br>
+                                            <b>NICKNAME :</b> Tawan <br>
+                                            <b>DATE OF BIRTH :</b> 28 Jan 2001 <b>AGE :</b> 20 <br>
+                                            <b>HEIGHT :</b> 180 cm <b>Weight :</b> 63 kg<br>
+                                            <b>ID :</b> 62010308
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="t2" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 7vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>Primary school :</b> Plearnpattana school<br>
+                                            <b>High school :</b> The Demonstration School of Silpakorn University<br>
+                                            <b>University :</b> King Mongkut's Institute of Technology Ladkrabang
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="t3" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 5vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>Sports :</b> Basketball, Football<br>
+                                            <b>Hobbies :</b> Play games, watch movies
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section class="smarty">
+                <div class="container remove-all-margin-padding hide" id="smart">
+                    <div class="detail d-flex justify-content-center align-items-center" style="margin: 0vw; padding: 0vw; width: 100vw; height: 100vh;">
+                        <img src="/image/profile/smt_bg.png" style="height: 100%; width: 100%; z-index: -1; position: absolute;">
+                        <div class="left d-flex" style="flex-wrap: nowrap;">
+                            <img src="/image/profile/sc.png" class="yugi" style="height: 90;">
+                        </div>
+                        <div class="right">
+                            <div class="group d-flex">
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#s1" aria-expanded="false" aria-controls="s1" style="font-size: 2vw;">PROFILE</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#s2" aria-expanded="false" aria-controls="s2" style="font-size: 2vw;">EDUCATION</button>
+                                <button class="btn btn-outline-light m-2 style-font" type="button" data-bs-toggle="collapse" data-bs-target="#s3" aria-expanded="false" aria-controls="s3" style="font-size: 2vw;">INTEREST</button>
+                            </div>
+                            <div class="row style-font style-font-size-15">
+                                <div class="collapse multi-collapse" id="s1" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 12vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>NAME :</b> Burashat Hussakul <br>
+                                            <b>NICKNAME :</b> Smarty <br>
+                                            <b>DATE OF BIRTH :</b> 24 Feb 2001 <b>AGE :</b> 19 years old <br>
+                                            <b>HEIGHT :</b> 184 cm <b>Weight :</b> 90 kg<br>
+                                            <b>ID :</b> 62010512
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="s2" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 7vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>Primary school :</b> Dolvihaya<br>
+                                            <b>High school :</b> Patumkongka School<br>
+                                            <b>University :</b> King Mongkut's Institute of Technology Ladkrabang
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="collapse multi-collapse" id="s3" style="padding: 0.5vw 0vw 0vw 2vw">
+                                    <div class="card card-body" style="width: 48vw; height: 5vw; margin: 0; padding: 0vw 0vw 0vw 0.5vw;">
+                                        <p class="text">
+                                            <b>Sports :</b> Basketball<br>
+                                            <b>Hobbies :</b> Play games, Listen to music, Eat delicious food
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <script src="control.js"></script>
+</body>
+
+</html>

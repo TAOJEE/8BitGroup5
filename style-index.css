@@ -1,0 +1,187 @@
+.style-font {
+    font-family: 'Nine';
+}
+
+.style-font-size-35 {
+    font-size: 3.5vw;
+}
+
+.style-font-size-15 {
+    font-size: 1.5vw;
+}
+
+.text-dec {
+    color: white;
+    text-shadow: 4px 4px 4px black;
+}
+
+.bg-transparent {
+    background: transparent;
+}
+
+.hide {
+    display: none;
+}
+
+.hov:hover .hide {
+    display: block;
+}
+
+.remove-all-margin-padding {
+    margin: 0 ! important;
+    padding: 0 ! important;
+}
+
+
+.name {
+    top: 90%;
+    font-size: 4vw;
+}
+
+
+/* start */
+
+.toad {
+    font-size: 8vw;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.colorstyle {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.start .container .text h2 {
+    color: #3B1B72;
+    text-shadow: 2px 2px 2px #FF00FF;
+    font-size: 8vw;
+    background-color: transparent;
+    text-align: center;
+}
+
+.start .container button {
+    position: absolute;
+    font-size: 5vw;
+    font-family: 'Nine';
+    /* font-size: 5rem; */
+    display: flex;
+    flex-direction: row;
+}
+
+.start .container img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.start .container .text p {
+    font-size: 3vw;
+    text-align: center;
+}
+#backBtn{
+    width: 10vw;
+    height: 5vw;
+}
+
+/* carousel */
+.bg2{
+    background:url('/image/BACKGROUND2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60vw;
+    width: cover;
+}
+.carousel-inner,
+.carousel,
+.carousel-item {
+    width: 100px;
+}
+
+.carousel {
+    height: fit-content;
+}
+
+.carousel-item {
+    height: 600px;
+    cursor: pointer;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+
+/* choose */
+
+.choose .container .text {
+    font-size: 5vw;
+}
+
+.tawanface {
+    clip-path: circle();
+}
+
+
+/* profile */
+
+/* .textcard {
+    font-size: 2vw;
+} */
+.bg {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-position: bottom;
+}
+
+.right {
+    width: 50vw;
+    height: 35vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-left: 5vw;
+}
+
+.left {
+    height: 30vw;
+}
+
+.right .group,
+.left,
+.detail {
+    justify-content: center;
+}
+
+.profile .left img {
+    height: 30vw;
+}
+.btn{
+    font-size: 2vw;
+}
+.profile button {
+    font-size: 2vw;
+}
+
+.detail {
+    height: 100vh;
+    margin-top: 5vw;
+    width: 100vw;
+}
+
+.smarty .right {
+    width: 50vw;
+    height: 35vw;
+    border-radius: 20px;
+    margin-left: 5vw;
+    background-color: rgba(255, 255, 255, 0.4);
+}
